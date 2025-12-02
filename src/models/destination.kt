@@ -15,3 +15,25 @@ fun recordSale(price: Double) {
     takings += price
     println("Sale recorded for $name: Ticket #$ticketsSold, Total takings: £%.2f".format(takings))
 }
+
+fun adjustPrices(factor: Double) {
+
+    // Update prices by a given factor
+    // Used for bulk price adjustments (increases or decreases)
+
+
+    if (factor <= 0) { //handles errors in case of a negative number
+        println("Error: Factor must be positive")
+        return
+    }
+
+    val oldSingle = singlePrice
+    val oldReturn = returnPrice
+
+    singlePrice = (singlePrice * factor).roundTo2DecimalPlaces()
+    returnPrice = (returnPrice * factor).roundTo2DecimalPlaces()
+
+    println("Prices updated for $name:")
+    println("  Single: £%.2f → £%.2f".format(oldSingle, singlePrice))
+    println("  Return: £%.2f → £%.2f".format(oldReturn, returnPrice))
+}
