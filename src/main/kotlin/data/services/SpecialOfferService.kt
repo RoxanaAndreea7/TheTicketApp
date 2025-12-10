@@ -1,4 +1,4 @@
-package main.kotlin.data.services
+package data.services
 
 import data.SpecialOffer
 import java.time.LocalDate

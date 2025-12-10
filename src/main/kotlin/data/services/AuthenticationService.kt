@@ -1,4 +1,4 @@
-package services
+package data.services
 
 import data.User
 
@@ -9,7 +9,7 @@ import data.User
  * allows login/logout, keeps track of failed attempts,
  * and provides simple admin validation.
  */
-class `AuthenticationService.kt` {
+class AuthenticationService {
 
     // Fixed list of users available in the system
     private val users = listOf(
